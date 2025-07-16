@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login  | profil</title>
+</head>
+<body>
+   <script>
+
+        var user=prompt("Masukan Username");
+        if (user=="syarif") {
+
+            var pw=prompt("Masukan password");
+            if (pw=="ganteng123") {
+                window.location.href='profile_perusahaan.html';
+            }
+            else{
+                alert("Hampura password n wrong");
+                window.location.href='login.html';
+            }
+        }
+        else{
+            alert("Sorry your username is failed");
+            window.location.href='login.html';
+        }
+   </script>
+</body>
+</html>

@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home-Profil</title>
+    <link rel="stylesheet" href="css/style.css">
+    <!-- <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+    
+            * {
+                transition: 1s;
+            }
+    
+            .badan {
+                background-image: url(img/foto.jpg);
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: top;
+                overflow: auto;
+                height: 100vh;
+            }
+            main.isi {
+                width: 100%;
+                margin: 0;
+            }
+            aside.satu {
+                width: 100%;
+                height: 400px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                padding-left: 50px;
+                text-transform: uppercase;
+                font-family: 'Poppins', sans-serif;
+                letter-spacing: 1px;
+                font-size: 1.5rem;
+                line-height: 1.5em;
+                color: white;
+                text-shadow: 1px 1px 3px grey;
+            }
+            aside.satu h1 span {
+                color: rgb(241, 75, 15);
+            }
+            aside.satu h3 {
+                letter-spacing: 2px;
+                font-family: 'Salsa', cursive;
+                text-transform: capitalize;
+                font-size: .9em;
+            }
+            aside.satu h3 span {
+                text-transform: uppercase;
+                color: rgb(202, 64, 13);
+            }
+            /* akhir aside satu */
+    
+            aside.dua {
+                color: black;
+                width: 100%;
+                background-color: rgb(241, 238, 238);
+                display: flex;
+            }
+            article {
+                padding: 20px;
+            }
+            aside.dua article h1 {
+                text-transform: uppercase;
+                font-size: 3.5vmin;
+                padding: 20px;
+                color: gray;
+            }
+            aside.dua article p {
+                font-size: 3vmin;
+                font-family: cursive;
+                padding: 20px;
+                text-align: justify;
+            }
+            article img {
+                /* width: 100%; */
+                max-width: 500px;
+            }
+            aside.dua article p a{
+                color:rgba(21, 122, 129, 0.603) ;
+                display: inline-block;
+                text-decoration: none;
+            }
+            aside.dua article p a::after {
+                content: "";
+                display: block;
+                height: 2px;
+                background-color: rgba(21, 122, 129, 0.603);
+                transition: .5s ease-in-out;
+                width: 0;
+                margin-bottom: 1px;
+            }
+            aside.dua article p a:hover::after {
+                width: 100%;
+            }
+            footer {
+                position: static;
+            }
+    
+            /* responsive */
+            @media screen and (max-width:800px) {
+                aside.dua {
+                    flex-direction: column;
+                    gap: 50px;
+                    align-items: center;
+                }
+                article img {
+                    width: 100%;
+                }
+            }
+        </style> -->
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .awak {
+            width: fit-content;
+            margin: 35px auto;
+            background-color: red;
+            padding: 20px;
+            overflow: hidden;
+
+        }
+        .awak h2{
+            border-bottom: 1px solid gainsboro;
+            margin: 5px;
+            margin-bottom: 13px;
+        }
+        .list-produk{
+            border: 1px solid gainsboro;
+            padding: 10px;
+            float: left;
+            width: 200px;
+            /* width: 40%; */
+            margin: 5px ;
+            transition: .5s;
+
+            
+        }
+        .list-produk:hover{
+            box-shadow: 0px 5px 10px 2px black;
+            transform: scale(1.01);
+        }
+        .list-produk img {
+            width: 100%;
+            height: 180px;
+            display: block;
+            margin-bottom: 5px;
+        }
+        .list-produk h4, .list-produk h5{
+            color: crimson;
+            text-align: center;
+            margin-bottom: 5px;
+        }
+        .tombol {
+            text-decoration: none;
+            border-radius: 7px;
+            padding: 7px;
+            display: block;
+            float: left;
+            width: 45%;
+            margin: 4px;
+            text-align: center;
+            color: white;
+        }
+        .tombol:hover {
+            background-color: black;
+            transition-duration: 1s;
+        }
+        .tombol-detail{
+            background-color: green;
+        }
+        .tombol-beli{
+            background-color: crimson;
+        }
+    </style>
+   
+</head>
+<body>
+    
+    <div class="badan">
+        <header class="judul">
+            <img src="img/sukarobot2.png" alt="">
+            <nav class="menu">
+                <ul id="daftar" >
+                    <a href="profile_perusahaan.html" >Home</a>
+                    <a href="karir.html">Karir</a>
+                    <a href="tentang.html">Tentang</a>
+                    <a href="produk.html" class="aktif">Produk</a>
+                    <a href="galery.html">Galery</a>
+                    <a href="login.html" class="login">login</a>   
+                </ul>
+                <div id="menu">
+                    <input type="checkbox"  id="input">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </nav>
+          </header>
+        <div class="isi">
+           <div class="awak">
+                <h2 style="text-align: center;">List Produk Baru</h2>
+                <!-- Start Data Produk -->
+                <div class="list-produk">
+                    <img src="img/jaket1.jpg" alt="jaket Parasut">
+                    <h4>Jaket Parasut Polos</h4>
+                    <h5>Rp, 150,000</h5>
+                    <a href="#" class="tombol tombol-detail">Detail</a>
+                    <a href="#" class="tombol tombol-beli">Beli</a>
+                </div>
+                <div class="list-produk">
+                    <img src="img/jaket2.jpg" alt="jaket Parasut">
+                    <h4>Jaket Parasut Polos</h4>
+                    <h5>Rp, 150,000</h5>
+                    <a href="#" class="tombol tombol-detail">Detail</a>
+                    <a href="#" class="tombol tombol-beli">Beli</a>
+                </div>
+                <div class="list-produk">
+                    <img src="img/jaket3.jpg" alt="jaket Parasut">
+                    <h4>Jaket Parasut Polos</h4>
+                    <h5>Rp, 150,000</h5>
+                    <a href="#" class="tombol tombol-detail">Detail</a>
+                    <a href="#" class="tombol tombol-beli">Beli</a>
+                </div>
+                <div class="list-produk">
+                    <img src="img/jaket4.jpg" alt="jaket Parasut">
+                    <h4>Jaket Parasut Polos</h4>
+                    <h5>Rp, 150,000</h5>
+                    <a href="#" class="tombol tombol-detail">Detail</a>
+                    <a href="#" class="tombol tombol-beli">Beli</a>
+                </div>
+                <!-- End Data Produk -->
+           </div>
+        </div>
+
+        <div class="footer">
+            
+            <marquee behavior="" direction="right">Syarif Apriludi</marquee>
+            
+        </div>
+    </div>
+    
+    <script>
+        
+        var tombol = confirm("maaf halaman ini belum tersedia");
+         if (tombol == false)window.location.href="produk.html";
+         else window.location.href="profile_perusahaan.html";
+    </script>
+    <script src="js/scrip.js"></script>
+</body>
+</html>

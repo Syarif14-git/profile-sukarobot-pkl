@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Karir</title>
+    <link rel="stylesheet" href="css/style.css">
+    <!-- <style>
+      .isi {
+        background-image: linear-gradient(45deg, rgb(175, 214, 250) , rgb(195, 236, 252),rgb(205, 234, 245) );
+        min-height: 800px;
+      }
+      .judul {
+        text-align: center;
+        padding: 20px;
+      }
+      .wadah {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        gap: 20px;
+        flex-wrap: wrap;
+        padding: 20px;
+        min-height: 100vh;
+      }
+      .image {
+        width: 150px;
+        height: 230px;
+        padding: 15px;
+        overflow: hidden;
+        transform-origin: center;
+        transform: perspective(800px) rotateY(40deg);
+        transition: .5s;
+      }
+      .image img {
+        width: 100%;
+        border-radius: 10px;
+        position: relative;
+        box-shadow: -10px 1px 10px -3px rgba(128, 128, 128, 0.788);
+        transition: .5s;
+        -webkit-box-reflect: below 3.5px linear-gradient(transparent, transparent,transparent, rgb(195, 236, 252));
+      }
+      .image .member-content {
+        width: 100%;
+        height: 0;
+        overflow: hidden;
+        transform-origin: 0 0;
+        transform: rotateX(90deg);
+        background-color: white;
+        text-align: center;
+        font-size: 12px;
+        font-family: 'Courier New', Courier, monospace;
+        transition: 1s  cubic-bezier(0, -0.8, 1, 2.1);
+        border-radius: 10px;
+      }
+      .image .member-content h4 {
+        font-family: cursive;
+        font-size: 1em;
+      }
+      .image .member-content span {
+        font-size: .8em;
+        color: gray;
+        font-weight: bold;
+      }
+      .image .member-content p {
+        font-size: .8em;
+        color: gray;
+      }
+      .image:hover {
+        transform: perspective(800px) rotateY(0deg);
+      }
+      .image:hover img {
+        box-shadow: 0px -4px 7px -1px  rgba(128, 128, 128, 0.788);
+      }
+      img:hover + .member-content{
+        height: 70px;
+        transform: rotateX(0deg);
+        padding: 5px;
+      }
+      
+      
+    </style> -->
+    <style>
+      .isi .judul {
+        text-align: center;
+        padding: 30px 0;
+        background-color: rgb(21, 122, 129);
+        color:rgb(130, 184, 197) ;
+        text-shadow: -3px 2px 4px rgb(56, 84, 87);
+      }
+
+      .isi .wadah {
+        padding: 50px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 50px;
+      }
+      
+      .isi .wadah .image {
+        width: 300px;
+        padding: 20px 0px;
+        background-color: rgb(21, 122, 129);
+        border-radius: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+      }
+
+      .wadah .image::after {
+        box-sizing: border-box;
+        content: "";
+        display: block;
+        position: absolute;
+        top: 6px;
+        left: 0;
+        height: 85%;
+        border-width: 40px;
+        border-style: solid;
+        border-color: transparent transparent transparent rgb(21, 122, 129);
+        filter: drop-shadow(2px 0 3px black);
+        transition: .5s;
+      }
+
+      .isi .wadah .member-content {
+        width: 90% ;
+        background-color: white;
+        padding: 10px;
+        border-radius: 10px;
+        text-align: center;
+        position: relative;
+        transition: .5s;
+      }
+
+      .wadah .image .member-content img {
+        width: 100%;
+        text-align: center;
+      }
+
+      .image .member-content p {
+        margin: 10px 0;
+      }
+
+      /* transisi */
+      .image:hover .member-content{
+        margin-right: -100px;
+        box-shadow: -2px 3px 8px black;
+      }
+
+      .image:hover::after {
+        filter: drop-shadow(0px 0px 3px black);
+      }
+    </style>
+</head>
+<body>
+    
+    <div class="badan">
+      <header class="judul">
+        <img src="img/sukarobot2.png" alt="">
+        <nav class="menu">
+          <ul id="daftar" >
+            <a href="profile_perusahaan.html">Home</a>
+            <a href="karir.html" class="aktif">Karir</a>
+            <a href="tentang.html">Tentang</a>
+            <a href="produk.html">Produk</a>
+            <a href="galery.html">Galery</a>
+            <a href="login.html" class="login">login</a>   
+        </ul>
+            <div id="menu">
+                <input type="checkbox"  id="input">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+      </header>
+      <div class="isi">
+          <div class="judul">
+            <h1>member Sukarobot academy</h1>
+          </div>
+          <div class="wadah">
+            <div class="image">
+              <div class="member-content">
+                <img src="img/kakAsep.png" alt="">
+                <h4>Asep Saeban</h4>
+                <p>Robotik</p>
+                <p>instruktur Robotik yang berpengalaman dibidang robotik</p>
+              </div>
+            </div>
+            <div class="image">
+              <div class="member-content">
+                <img src="img/kakIlyas.jpg" alt="">
+                <h4>Ilyas Abdul Aziz</h4>
+                <span>Robotik</span>
+                <p>instruktur Robotik yang berpengalaman dibidang robotik</p>
+              </div>
+            </div>
+            <div class="image">
+              <div class="member-content">
+                <img src="img/kakAdi.jpg" alt="">
+                <h4>Adi Palwo</h4>
+                <span>Robotik</span>
+                <p>instruktur Robotik yang berpengalaman dibidang robotik</p>
+              </div>
+            </div>
+            <div class="image">
+              <div class="member-content">
+                <img src="img/kakOlis.jpg" alt="">
+                <h4>Siti Olis</h4>
+                <span>Robotik</span>
+                <p>instruktur Robotik yang tersertifikasi</p>
+              </div>
+            </div>
+            <div class="image">
+              <div class="member-content">
+                <img src="img/kakWanda.jpg" alt="">
+                <h4>Wanda</h4>
+                <span>coding for kids</span>
+                <p>instruktur Coding for kids yang tersertifikasi</p>
+              </div>
+            </div>
+            <div class="image">
+              <div class="member-content">
+                <img src="img/kakSarah.jpg" alt="">
+                <h4>Siti Syarah Jamilah</h4>
+                <span>Digital Marketing</span>
+                <p>instruktur Digital Marketing Madya yang tersertifikasi</p>
+              </div>
+            </div>
+            <div class="image">
+              <div class="member-content">
+                <img src="img/kakDian.jpg" alt="">
+                <h4>Dian Puspita</h4>
+                <span>Digital Marketing</span>
+                <p>instruktur Digital Marketing Madya yang tersertifikasi</p>
+              </div>
+            </div>
+            <div class="image">
+              <div class="member-content">
+                <img src="img/kakRaga.jpg" alt="">
+                <h4>Raga</h4>
+                <span>Robotik</span>
+                <p>instruktur Robotik yang berpengalaman dibidang robotik</p>
+              </div>
+            </div>
+            <div class="image">
+              <div class="member-content">
+                <img src="img/kakRayhan.jpg" alt="">
+                <h4>M Rayhan</h4>
+                <span>Robotik</span>
+                <p>instruktur Robotik yang berpengalaman dibidang robotik</p>
+              </div>
+            </div>
+            <div class="image">
+              <div class="member-content">
+                <img src="img/kakHasan.png" alt="">
+                <h4>Hasan</h4>
+                <span>Digital Marketing</span>
+                <p>instruktur Digital Marketing Madya yang tersertifikasi</p>
+              </div>
+            </div>
+          </div>
+      </div>
+      <div class="footer">
+          <marquee behavior="" direction="">Syarif Apriludi</marquee>
+      </div>
+    </div>
+    
+    <script src="js/scrip.js"></script>
+</body>
+</html>

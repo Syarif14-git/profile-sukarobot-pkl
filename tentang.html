@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tentang</title>
+    <link rel="stylesheet" href="css/style.css">
+    
+    <style>
+        header {
+            z-index: 22;
+        }
+        .isi .judul {
+            width: 100%;
+            height: 200px;
+            background-color: rgb(21, 122, 129);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            font-size: 12px;
+        }
+        .isi .judul h1 {
+            text-align: center;
+            text-transform: uppercase;
+            width: 100%;
+            color: rgb(130, 184, 197);
+            padding:10px;
+            font-size: 6vmin;
+            font-family: 'Roboto Mono', monospace;
+            letter-spacing: 2px;
+            text-shadow: -5px 4px 8px rgb(56, 84, 87);
+        }
+        .isi .judul p {
+            font-size: 2em;
+            text-transform: capitalize;
+            color: rgb(130, 184, 197);
+            font-family: 'Roboto Mono', monospace;
+            letter-spacing: 2px;
+            text-shadow: -5px 4px 8px rgb(56, 84, 87);
+            text-align: center;
+        }
+        .tentang {
+            width: 100%;
+            padding: 50px;
+            margin-bottom: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 50px;
+        }
+        
+        .logo {
+            width: 230px;
+            height: 230px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            z-index: 1;
+            /* order: 1; */
+            
+        }
+
+        .logo::after, .logo::before {
+            content: " ";
+            display: block;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            box-shadow: 0 0 9px 2px rgba(21, 122, 129, 0.603), 0 0 12px 3px rgba(21, 122, 129, 0.603),
+            0 0 15px 4px rgba(21, 122, 129, 0.603);
+            background-color: #eaeaea;
+        }
+        .logo::after {
+            z-index: -1;
+            border-radius: 30% ;
+            animation: animasi 25s linear infinite;
+        }
+        .logo::before {
+            border-radius: 30%;
+            z-index: -1;
+            animation: animasi2 25s linear infinite;
+        }
+        .logo .imge {
+            width: 230px;
+            height: 230px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            background-color: white;
+        }
+        .logo img {
+            width: 170px;
+            border-radius: 20px;
+        }
+        
+        .text {
+            flex: 1.5;
+        }
+        
+        .text h1 {
+            color: rgb(89, 120, 138);
+            padding:30px 10px;
+        }
+        .text h1::after {
+            content: "";
+            display: inline-block;
+            width: 250px;
+            height: 2px;
+            background-color: rgb(89, 120, 138);
+            margin: 10px;
+        }
+        .text p {
+            padding: 10px;
+            font-family: cursive;
+            letter-spacing: 1px;
+            font-size: 3vmin;
+            text-align: justify;
+        }
+
+        /* animasi */
+        @keyframes animasi {
+            to {
+                transform: rotate(-360deg);
+            }
+        }
+        @keyframes animasi2 {
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        /* visi */
+        .isi > h1 {
+            width: 100%;
+            background-color: rgb(21, 122, 129);
+            color: rgb(130, 184, 197);
+            padding:10px;
+            font-size: 6vmin;
+            text-align: center;
+            font-family: 'Roboto Mono', monospace;
+            letter-spacing: 2px;
+            text-shadow: -5px 4px 8px rgb(56, 84, 87);
+            height: 150px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .visimisi {
+            display: flex;
+            padding: 40px;
+            justify-content: space-around;
+        }
+        .visi, .misi {
+            width: 30%;
+            padding: 40px;
+            border: 2px solid rgba(128, 128, 128, 0.644);
+            font-family: cursive;
+            transition: .5s;
+        }
+        .visi:hover, .misi:hover {
+            transform: scale(103%);
+            background-color:rgb(21, 122, 129) ;
+            color:rgb(130, 184, 197) ;
+            text-shadow: -3px 2px 4px rgb(56, 84, 87);
+        }
+        .visi {
+            border-radius: 0 20% 0 20%;
+        }
+        .misi {
+            border-radius: 20% 0 20% 0;
+        }
+        .visimisi h2 {
+            font-family: 'Poppins', sans-serif;
+            letter-spacing: 3px;
+            color: gray;
+            padding: 10px;
+        }
+        .visimisi h2::after {
+            content: "";
+            width: 100px;
+            height: 1.5px;
+            background-color: grey;
+            display: inline-block;
+            margin: 5px 10px;
+        }
+        .visimisi h2, .isi h3 {
+            padding: 10px;
+        }
+
+        /* responsive */
+        @media screen and (max-width:800px){
+            .tentang {
+                flex-direction: column;
+            }
+            .visimisi {
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                gap: 50px;
+            }
+            .visi, .misi {
+                width: 80%;
+            }
+        }
+
+    </style>
+    
+</head>
+<body>
+    
+    <div class="badan">
+        <header class="judul">
+            <img src="img/sukarobot2.png" alt="">
+            <nav class="menu">
+                <ul id="daftar" >
+                    <a href="profile_perusahaan.html" >Home</a>
+                    <a href="karir.html">Karir</a>
+                    <a href="tentang.html" class="aktif">Tentang</a>
+                    <a href="produk.html">Produk</a>
+                    <a href="galery.html">Galery</a>
+                    <a href="login.html" class="login">login</a>   
+                </ul>
+                <div id="menu">
+                    <input type="checkbox"  id="input">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </nav>
+          </header>
+
+        <div class="isi">
+
+            <div class="judul">
+                <h1>Tentang sukarobot</h1>
+                <p>kenalan dengan sukarobot academy</p>
+            </div>
+
+            <div class="tentang">
+                <div class="logo">
+                    <div class="imge">
+                        <img src="img/sukarobot.png" alt="" class="pic">
+                    </div>
+                </div>
+
+                <div class="text">
+                   <h1>SEJARAH SUKAROBOT ACADEMY</h1>
+                   <p>
+                    Sukarobot Academy merupakan Lembaga pendidikan non formal fokus memberikan edukasi bidang robotik dan koding yang dapat membangkitkan daya kreativitas, imajinasi dan inovasi anak di bawah naungan PT Sukarobot Academy Indonesia.
+
+                    PT Sukarobot Academy Indonesia memiliki bidang usaha yaitu : lembaga pendidikan dan pelatihan, Tempat Uji Kompetensi bidang TIK, dan project centre bidang TIK,Robotika, IoT, Aplikasi berbasis web. Sukarobot Academy telah dirintis di Sukabumi sejak bulan Agustus tahun 2021 , mengawali kerjasama dengan 2 (dua) sekolah, dengan total siswa 50 orang. Pada tahun 2022 sukarobot telah bekerjasa denga 15 Sekolah dengan total siswa 275 siswa, Univesitas Nusa Putra, Pemerintah kota dan kabupaten Sukabumi serta Dinas Perpustakaan dan Arsip Kota Kota Sukabumi.
+                    
+                    Pada tahun 2023 Sukarobot Academy sudah memiliki 3 cabang, yang berlokasi di Sukabumi, Surabaya dan bogor, dan pada saat ini sudah memiliki 36 partner kerjasama sekolah dan lembaga lainnya. Sukarobot Academy terus berupaya untuk meningkatkan kualitas pembelajaran yang dapat menghasilkan peserta didik yang siap untuk berinovasi dan berprestasi.
+                   </p>
+                </div>
+            </div>
+
+            <h1>VISI & MISI SUKAROBOT ACADEMY</h1>
+            <div class="visimisi">
+                <article class="visi">
+                    <h2>VISI </h2>
+                    <h3>
+                        Mewujudkan dan Melahirkan sumberdaya manusia yang berinovatif dan kreatif dalam teknologi, serta siap menghadapi tantangan di era global.</h3>
+                </article>
+                <article class="misi">
+                    <h2>MISI </h2>
+                    <h3>
+                        <ul>
+                            <li>Menyiapkan lulusan yang berkualitas sesuai perkembangan ilmu pengetahuan dan teknologi.</li>
+                            <li> Meningkatkan riset inovasi dalam teknologi</li>
+                            <li> Menerapkan model pembelajaran digitalisasi</li>
+                        </ul>
+                    </h3>
+                </article>
+            </div>
+        </div>
+        <div class="footer">
+            <marquee behavior="" direction="">Syarif Apriludi</marquee>
+        </div>
+    </div>
+    
+    <script src="js/scrip.js"></script>
+</body>
+</html>

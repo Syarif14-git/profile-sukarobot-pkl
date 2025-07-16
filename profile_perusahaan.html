@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home-Profil</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Salsa&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+
+        * {
+            transition: 1s;
+        }
+
+        .badan {
+            background-image: url(img/foto.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: top;
+            overflow: auto;
+            height: 100vh;
+        }
+        main.isi {
+            width: 100%;
+            margin: 0;
+        }
+        aside.satu {
+            width: 100%;
+            height: 400px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding-left: 50px;
+            text-transform: uppercase;
+            font-family: 'Poppins', sans-serif;
+            letter-spacing: 1px;
+            font-size: 1.5rem;
+            line-height: 1.5em;
+            color: white;
+            text-shadow: 1px 1px 3px grey;
+        }
+        aside.satu h1 span {
+            color: rgb(241, 75, 15);
+        }
+        aside.satu h3 {
+            letter-spacing: 2px;
+            font-family: 'Salsa', cursive;
+            text-transform: capitalize;
+            font-size: .9em;
+        }
+        aside.satu h3 span {
+            text-transform: uppercase;
+            color: rgb(202, 64, 13);
+        }
+        /* akhir aside satu */
+
+        aside.dua {
+            color: black;
+            width: 100%;
+            background-color: rgb(241, 238, 238);
+            display: flex;
+            padding: 50px 20px;
+            position: relative;
+        }
+        article {
+            padding: 50px;
+        }
+        article.a {
+            flex: 1.5;
+
+        }
+        article.b {
+            position: relative;
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            width: fit-content;
+        }
+        aside.dua article h1 {
+            text-transform: uppercase;
+            font-size: 3.5vmin;
+            padding: 20px;
+            color: gray;
+        }
+        aside.dua article p {
+            font-size: 3vmin;
+            font-family: cursive;
+            padding: 20px;
+            text-align: justify;
+        }
+        article.b img {
+            /* width: 100%; */
+            width: 50vmin;
+            height:50vmin;
+            object-fit: cover;
+            border-radius: 50%;
+            position: absolute;
+            animation: animasi 3s linear alternate infinite;
+        }
+        aside.dua article p a{
+            color:rgba(21, 122, 129, 0.603) ;
+            display: inline-block;
+            text-decoration: none;
+        }
+        aside.dua article p a::after {
+            content: "";
+            display: block;
+            height: 2px;
+            background-color: rgba(21, 122, 129, 0.603);
+            transition: .5s ease-in-out;
+            width: 0;
+            margin-bottom: 1px;
+        }
+        aside.dua article p a:hover::after {
+            width: 100%;
+        }
+        footer {
+            position: static;
+        }
+
+        /* responsive */
+        @media screen and (max-width:800px) {
+            aside.dua {
+                flex-direction: column;
+                gap: 50px;
+                align-items: center;
+                height: 900px;
+            }
+            article.a {
+                order: 2;
+            }
+            article.b {
+                order: 1;
+            }
+        }
+
+
+        /* ANIMASI */
+        @keyframes animasi {
+            0% {
+                top: 20px;
+            }
+            100% {
+                top: 50px;
+            }
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="badan">
+        <header class="judul">
+            <img src="img/sukarobot2.png" alt="">
+            <nav class="menu">
+                <ul id="daftar" >
+                    <a href="profile_perusahaan.html" class="aktif">Home</a>
+                    <a href="karir.html">Karir</a>
+                    <a href="tentang.html">Tentang</a>
+                    <a href="produk.html">Produk</a>
+                    <a href="galery.html">Galery</a>
+                    <a href="login.html" class="login">login</a>   
+                </ul>
+                <div id="menu">
+                    <input type="checkbox"  id="input">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </nav>
+        </header>
+        <main class="isi">
+            <aside  class="satu">
+                <h1>Study at <span>sukarobot <br> academy bogor</span></h1>
+                <h1>informatic & robotik </h1>
+                <h3>selamat datang di website laporan <span>pkl</span> syarif</h3>
+            </aside>
+            
+            <aside class="dua">
+                <article class="a">
+                    <h1><q>belajar apa sih di sukarobot academy cabang bogor</q></h1>
+                    <p>
+                        hallo guys sekarang syarif mau share nih pengalaman syarif waktu pkl di sukarobot academy cabang bogor, Sebelum syarif carita alangkah lebih baiknya kalian mengenal dulu apa itu  <a href="https://sukarobot.com/">sukarobot academy</a> kalian boleh cek di website resminya atau <a href="tentang.html">tentang sukarobot</a>
+                    </p>
+                </article>
+                <article class="b">
+                    <img src="img/syarif2.jpg" alt="">
+                </article>
+            </aside>
+        
+        </main>
+        <div class="footer"> 
+            <marquee behavior="" direction="">Syarif Apriludi</marquee> 
+        </div>
+    </div>
+    <script src="js/scrip.js"></script>
+    <!-- <script src="js/scrip.js"></script> -->
+</body>
+</html>

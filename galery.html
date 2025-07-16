@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home-Profil</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .isi {
+            background-color: #eaeaea;
+        }
+        .isi .judul {
+            height: 100px;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: cursive;
+            text-transform: uppercase;
+            font-weight: bold;
+            background-color:rgb(21, 122, 129);
+            color:rgb(130, 184, 197) ;
+            text-shadow: -3px 2px 4px rgb(56, 84, 87);
+        }
+        .isi .wadah {
+            padding: 50px;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 50px;
+            transition: 1s;
+            /* background-color: rgb(29, 27, 27); */
+        } 
+        .wadah .foto {
+            width:  fit-content;
+            height: fit-content;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: 1s;
+            position: relative;
+        }  
+        .foto .galery{
+            width: 200px;
+            height: 300px;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            padding: 5px;
+            background-color: white;
+            z-index: 1;
+            box-shadow: 0 0 2px 1px gray;
+            transition: 1s;
+        }
+        .galery img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: .5s;
+            flex: 1;
+            filter: brightness(50%);
+        }
+        .galery .ket {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 5px;
+            overflow: hidden;
+            color:black ;
+            text-shadow: -3px 2px 4px rgb(56, 84, 87);
+            transition: .8s;
+            opacity: 0;
+            text-align: center;
+            font-family: cursive;
+            font-weight: bold;
+            text-transform: capitalize;
+            height: 0;
+        }
+        .galery:hover .ket {
+            height: 50px;
+            opacity: 1;
+        }
+        .galery:hover img {
+            filter: brightness(100%);
+        }
+        .foto::before, .foto::after {
+            content: "";
+            display: block;
+            width: 100%;
+            height: 100%;
+            background-color: white;
+            /* border: 2px solid rgba(0, 0, 0, 0.466); */
+            opacity: 0;
+            position: absolute;
+            box-shadow: 0 0 2px 1px gray;
+            transition: .5s;
+        }
+        .foto:hover::before {
+            opacity: 1;
+            transform: rotate(7deg);
+        }
+        .foto:hover::after {
+            opacity: 1;  
+            transform: rotate(15deg);
+        }
+
+    </style>
+</head>
+<body>
+    
+    <div class="badan">
+        <header class="judul">
+            <img src="img/sukarobot2.png" alt="">
+            <nav class="menu">
+                <ul id="daftar" >
+                    <a href="profile_perusahaan.html" >Home</a>
+                    <a href="karir.html">Karir</a>
+                    <a href="tentang.html">Tentang</a>
+                    <a href="produk.html">Produk</a>
+                    <a href="galery.html" class="aktif">Galery</a>
+                    <a href="login.html" class="login">login</a>   
+                </ul>
+                <div id="menu">
+                    <input type="checkbox"  id="input">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </nav>
+          </header>
+
+        <div class="isi">
+            <div class="judul">
+                <h2 style="text-align: center;">galery</h2>
+            </div>
+            <div class="wadah">
+                <div class="foto">
+                    <div class="galery">
+                        <img src="img/belajar1.jpg" alt="avatar" >
+                        <div class="ket">membersihkan meja admin</div>
+                     </div>
+                </div>
+                <div class="foto">
+                    <div class="galery">
+                        <img src="img/belajar2.jpg" alt="avatar" >
+                        <div class="ket">membersihkan meja admin</div>
+                     </div>
+                </div>
+                <div class="foto">
+                    <div class="galery">
+                        <img src="img/belajar4.jpg" alt="avatar" >
+                        <div class="ket">belajar arduino</div>
+                     </div>
+                </div>
+                <div class="foto">
+                    <div class="galery">
+                        <img src="img/belajar6.jpg" alt="avatar" >
+                        <div class="ket">belajar arduino</div>
+                     </div>
+                </div>
+                <div class="foto">
+                    <div class="galery">
+                        <img src="img/belajar7.jpg" alt="avatar" >
+                        <div class="ket">belajar arduino</div>
+                     </div>
+                </div>
+                <div class="foto">
+                    <div class="galery">
+                        <img src="img/belajar8.jpg" alt="avatar" >
+                        <div class="ket">merapihkan meja admin</div>
+                     </div>
+                </div>
+                <div class="foto">
+                    <div class="galery">
+                        <img src="img/belajar9.jpg" alt="avatar" >
+                        <div class="ket">mengenal  komponen wedo</div>
+                     </div>
+                </div>
+                <div class="foto">
+                    <div class="galery">
+                        <img src="img/belajar10.jpg" alt="avatar" >
+                        <div class="ket">mengenal komponen wedo</div>
+                     </div>
+                </div>
+                <div class="foto">
+                    <div class="galery">
+                        <img src="img/belajar11.jpg" alt="avatar" >
+                        <div class="ket">penjajapan pkl</div>
+                     </div>
+                </div>
+                <div class="foto">
+                    <div class="galery">
+                        <img src="img/belajar13.jpg" alt="avatar" >
+                        <div class="ket">pengenalan lingkungan pkl</div>
+                     </div>
+                </div>
+                <div class="foto">
+                    <div class="galery">
+                        <img src="img/belajar14.jpg" alt="avatar" >
+                        <div class="ket">mengenal komponen wedo</div>
+                     </div>
+                </div>
+                <div class="foto">
+                    <div class="galery">
+                        <img src="img/belajar15.jpg" alt="avatar" >
+                        <div class="ket">memengenal kmponen wedo</div>
+                     </div>
+                </div>
+                <div class="foto">
+                    <div class="galery">
+                        <img src="img/belajar16.jpg" alt="avatar" >
+                        <div class="ket">penjajapan pkl</div>
+                     </div>
+                </div>
+                <div class="foto">
+                    <div class="galery">
+                        <img src="img/belajar17.jpg" alt="avatar" >
+                        <div class="ket">penjajapan pkl</div>
+                     </div>
+                </div>
+                <div class="foto">
+                    <div class="galery">
+                        <img src="img/belajar18.jpg" alt="avatar" >
+                        <div class="ket">penjajapan pkl</div>
+                     </div>
+                </div>
+                <div class="foto">
+                    <div class="galery">
+                        <img src="img/belajar19.jpg" alt="avatar" style="height: calc(50px);
+                        object-position: top;" >
+                        <div class="ket">kerja bakti membersihkan taman</div>
+                     </div>
+                </div>
+                
+                <div class="foto">
+                    <div class="galery">
+                        <img src="img/belajar20.jpg" alt="avatar" >
+                        <div class="ket">membuat materi</div>
+                     </div>
+                </div>
+                <div class="foto">
+                    <div class="galery">
+                        <img src="img/belajar21.jpg" alt="avatar" >
+                        <div class="ket">membuat materi</div>
+                     </div>
+                </div>
+                
+            </div>
+            
+        </div>
+
+        <div class="footer">
+            <marquee behavior="" direction="right">Syarif Apriludi</marquee>
+        </div>
+    </div>
+    
+    <script src="js/scrip.js"></script>
+</body>
+</html>
